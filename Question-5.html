@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count words</title>
+</head>
+<body style="background-color: aqua;">
+  <h2>A Word Count JavaScript function</h2>
+
+  <!-- Input field and button to enter the sentence -->
+  <label for="sentenceInput">Enter a sentence:</label>
+  <input type="text" id="sentenceInput" />
+  
+  <button onclick="countWords()">Count Words</button>
+  
+  <!-- Paragraph to display the sentence -->
+
+  <p id="result"></p>
+
+  <script>
+    function countWords() {
+      // Get the input sentence
+      const sentence = document.getElementById('sentenceInput').value;
+      
+      // Split the sentence by spaces and filter out empty strings
+      const words = sentence.split(/\s+/).filter(word => word.length > 0);
+
+      // Display the word count in the paragraph with id 'result'
+      document.getElementById('result').textContent = `Number of words: ${words.length}`;
+    }
+  </script>
+</body>
+</html>
