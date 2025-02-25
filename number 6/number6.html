@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convert from celsius to fahrenheit</title>
+</head>
+<body>
+<!-- write a javaSript fuction that  converts a temperature from celsius to fahrenheit.a
+         The formula is:
+         f=(c*9/5)+32.the user should enter a value in celsius,
+         and the result should be displayed in fahrenheit -->
+         
+
+    <h2>Convert Celsius to Fahrenheit and Reverse the Result</h2>
+    <label for="celsiusInput">Enter temperature in Celsius:</label>
+    <input type="number" id="celsiusInput" placeholder="Enter Celsius">
+    <button onclick="convertAndReverse()">Convert and Reverse</button>
+    <p id="result"></p>
+
+    <script>
+      
+
+        function convertAndReverse() {
+            // Get the Celsius value from the input field
+            const celsius = parseFloat(document.getElementById('celsiusInput').value);
+
+            // Validate the input
+            if (isNaN(celsius)) {
+                alert('Please enter a valid number.');
+                return;
+            }
+
+            // Convert Celsius to Fahrenheit
+            const fahrenheit = (celsius * 9/5) + 32;
+
+            // Convert the Fahrenheit number to a string and reverse it
+            const reversedFahrenheit = fahrenheit.toString().split('').reverse().join('');
+
+            // Display the reversed Fahrenheit value in the paragraph
+            document.getElementById('result').innerText = `Reversed Fahrenheit: ${reversedFahrenheit}`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
+</html>
